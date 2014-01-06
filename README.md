@@ -1,10 +1,10 @@
 
 [![](ropensci_logo.png)](http://ropensci.org/)
-# QCBS Workshop
-**December 12th, 14:55 - 16:55**
+# UBC Workshop
+**February 14th, 2:00 - 5:00**
 *ROOM C*
 
-Welcome to the GitHub repository for the QCBS workshop. All the code and packages included in this material is already installed on our RStudio server. You'll simply need to login [here](http://rstudio.ropensci.org/) with the credentials provided to you at the workshop.
+Welcome to the GitHub repository for the UBC workshop. All the code and packages included in this material is already installed on our RStudio server. You'll simply need to login [here](http://rstudio.ropensci.org/) with the credentials provided to you at the workshop.
 
 You'll be able to copy-paste all of the code provided here directly into RStudio.
 
@@ -16,12 +16,12 @@ You'll be able to copy-paste all of the code provided here directly into RStudio
 
 |Topic|Time|
 |---------------|-------|
-|**Setup-Make sure all widgets are whirling**| 2:55 - 3:00 |
-|**Introduction to rOpenSci** [slides](http://ropensci.github.io/workshops-montreal-2013-12/00-introduction/intro_slides/index.html) | 3:00 - 3:15 |
-|**rOpenSci demos 1** *Taxonomic names*  | 3:15 - 3:50 |
-|**Break**| 3:50 - 4:00 |
-|**rOpenSci demos 2** *Biodiversity records* | 4:00 - 4:45 |
-|**Wrap up and discussion**  | 4:45 - 4:55 |
+|**Setup-Make sure all widgets are whirling**| 2:00 - 2:05 |
+|**Introduction to rOpenSci** [slides](http://ropensci.github.io/workshops-montreal-2013-12/00-introduction/intro_slides/index.html) | 2:05 - 2:30 |
+|**rOpenSci demos 1** *Taxonomic names*  | 2:30 - 3:20 |
+|**Break**| 3:20 - 3:30 |
+|**rOpenSci demos 2** *Biodiversity records* | 3:30 - 4:15 |
+|**Wrap up and discussion**  | 4:15 - 4:30 |
 
 ## Feedback
 

@@ -2,24 +2,21 @@
 
 by Scott Chamberlain
 
-View the talk at [http://ropensci.github.io/workshops-montreal-2013-12/00-introduction/intro_slides/index.html](http://ropensci.github.io/workshops-montreal-2013-12/00-introduction/intro_slides/index.html)
-
 A talk made with [reveal.js](https://github.com/hakimel/reveal.js)
 
 ## Reproduce this talk
 
-My repo of talk is pretty big, sorry about that. Working on reducing size by reducing duplicated dependencies.
-
 ```
-git clone https://github.com/workshops-montreal-2013-12
-open workshops-montreal-2013-12/00-introduction/intro_slides/index.html
+git clone https://github.com/ropensci/workshops-ubc-2014-02
+cd workshops-ubc-2014-02
+open index.html
 ```
 
 To use grunt/npm (you have to have npm installed of course)
 
 ```
-git clone https://github.com/workshops-montreal-2013-12
-cd workshops-montreal-2013-12/00-introduction/intro_slides
+git clone https://github.com/ropensci/workshops-ubc-2014-02
+cd workshops-ubc-2014-02
 npm install
 grunt serve
 ```

@@ -4,8 +4,8 @@
 	<head>
 		<meta charset="utf-8">
 		
-		<title>rOpenSci - Montreal QCBS Talk</title>
-		<meta name="description" content="Montreal QCBS Talk">
+		<title>rOpenSci - UBC Talk</title>
+		<meta name="description" content="UBC Talk">
 		<meta name="author" content="Scott Chamberlain">
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -16,7 +16,6 @@
 
 		<!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"> -->
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-		<link rel="stylesheet" href="lib/css/font-awesome-4.0.3/css/font-awesome.css">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -51,12 +50,8 @@
 	<!-- Any section element inside of this container is displayed as a slide -->
 	<div class="slides">
 		<section>
-			<h1>github.com/<br>ropensci/<br>workshops-montreal-2013-12</h1>
-		</section>
-
-		<section>
 			<br>
-			  <h1>rOpenSci - Open tools for open science</h1>
+			  <h1>A data toolkit for open science</h1>
 			  <p class="grey">Scott Chamberlain
 			  <p class="grey">@recology_
 		</section>
@@ -75,37 +70,140 @@
 		</section>
 
 		<section>
-			  <font size="14">
-			    <center> <font color="green"> <i class="fa fa-unlock fa-3x">&nbsp;Open</i></font> <br><br><br>to increase pace of science <br><br><br>& most research publicly funded - etc.</center><br><br>
+		    <font color="green"> <i class="fa fa-unlock fa-3x">&nbsp;Why Open?</i></font> 
+		    <br><br>
+		    <ul>
+	    	<br><br>
+	    	<h2 style="float:left;"> <i class="fa fa-code"></i> To increase the pace of science  </h2>
+			<h2 style="float:left;"> <i class="fa fa-code"></i> Most research publicly funded </h2>
+			</ul>
+		</section>
+
+		<section>
+			<center>
+				<font color="green"> <i class="fa fa-unlock fa-3x">&nbsp;Why Open?</i></font> 
+				<br><br>
+				<p class="grey">Sharing data increases citations</center>
+				<center><img src="img/piwowar.png" width="500"></center>
+			<a href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0000308" style="float:left;">Piwowar et al.</a>
+		</section>
+
+		<section>
+			<center>
+		    <font color="blue"><i class="fa fa-spinner fa-3x">&nbsp;Why Reproducible?</i> </font>
+		    <br><br>
+	    	<ul>
+	    	<br><br>
+	    	<h2 style="float:left;"> <i class="fa fa-code"></i> for yourself!</h2>
+			<h2 style="float:left;"> <i class="fa fa-code"></i> for others (if reproducible, more confidence in results) </h2>
+			</ul>
+			</center>
+		</section>
+
+		<section>
+			<center><font color="blue"><i class="fa fa-spinner fa-3x">&nbsp;Why Reproducible?</i> </font>
+			<p class="grey">Sort of a moral obligation as a scientist, right?
+				<p class="grey">And to avoid this -> </center>
+
+			<table cellpadding="40" cellspacing="40">
+			<tr>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+				<td>    <center><p>Reinhart-Rogoff<img src="img/excel.png" width="500"></center> 
+				<a href="http://www.nytimes.com/2013/04/19/opinion/krugman-the-excel-depression.html?_r=0" style="float:left;">excel</a></td>
+			<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+				<td>    <center><p>Chronic fatigue syndrome-XMRV<img src="img/judy.jpg" width="300"></center> 
+				<a href="http://retractionwatch.com/2011/12/22/chronic-fatigue-syndrome-xmrv-paper-retracted-by-science-completely-this-time/" style="float:left;">cfs</a></td>
+			</tr>
+			</table>
+		</section>
+
+		<section>
+			<h1>Or maybe you just want science to be easier</h1>
+		</section>
+
+		<section>
+			<h1>What tools do we need? What's missing?</h1>
+		</section>
+
+		<section>
+			<h1>A reproducible workflow</h1>
+		</section>
+
+		<section>
+			<center><h2>Not these!</h2></center>
+			<center><img src="img/closedtools.png"></center>
+		</section>
+
+		<section>
+		  <center><h2>These!</h2></center>
+		  <center><img src="img/opentools.png"></center>
+		</section>
+
+		<section>
+		  <center><h2>There's a learning curve, but...</h2></center>
+		  <center><img src="img/tasks.jpg"></center>
+		  <a href="http://www.globalnerdy.com/2012/04/24/geeks-and-repetitive-tasks/" style="float:left;">link</a>
+		</section>
+
+				<section>
+		<center><h2> Workflows side by side</h2></center>
+			<table cellpadding="40" cellspacing="20">
+				<tr>
+	<td>&nbsp;&nbsp;</td> 
+		<td width="50%"> <p>Our workflow now
+		    <ul>
+		      <font size="6">
+			    <li>Browser</li>
+			    <li>Excel</li>
+			    <li>SAS</li>
+			    <li>SigmaPlot</li>
+			    <li>Word</li>
+			    <li>Endnote</li>
 			  </font>
+		    </ul> </td>
+    <td>&nbsp;&nbsp;</td> 
+
+	   <td width="50%">  <p>What it could be 
+			<ul>
+		    <li>R (or Python)</li>
+		    <li>+ a few open source things (<a href="http://daringfireball.net/projects/markdown/">Markdown</a>, or <a href="http://www.latex-project.org/">LaTeX</a> )</li></ul></td>
+	<td>&nbsp;&nbsp;</td> 
+		</tr>
+		<tr>
+<td>&nbsp;&nbsp;</td> 
+		    <td><p> <i class="fa fa-money"></i> Cost = $$$$$$$<br>
+		    	<p> <i class="fa fa-unlock"></i> Open? = Nope
+			    <p> <i class="fa fa-spinner"></i> Reproducible? = Nope</td>
+<td>&nbsp;&nbsp;</td> 
+		    <td><p> <i class="fa fa-money"></i> Cost = 0<br>
+		    	<p> <i class="fa fa-unlock"></i> Open? = Yes!
+			    <p> <i class="fa fa-spinner"></i> Reproducible? = Yep</td>
+		  
+		</tr>
+	</table>
+		</section>
+
+
+		<section>
+		  <center><h2>A perfect marriage</h2></center>
+		  <br><br>
+		  <center> 
+		    <font color="red" size="12"><i class="fa fa-spinner fa-5x">&nbsp;</i></font>
+		    <font color="green" size="12"> <i class="fa fa-unlock fa-5x">&nbsp;</i></font> 
+		    <font color="blue" size="12" class="fragment"><i class="fa fa-cloud fa-5x">&nbsp;</i></font> 
+		  </center>
 		</section>
 
 		<section>
-			  <font size="14">
-			    <center><font color="blue"><i class="fa fa-spinner fa-3x">&nbsp;Reproducible</i></font> <br><br><br>for yourself!<br><br><br> for others (if reproducible, more confidence in results)</center>
-			  </font>
+		  <h2>Data is increasingly on the web <font color="blue"><i class="fa fa-cloud"></i></font></h2>
+		  <center><img src="img/data.png"></center>
 		</section>
 
 		<section>
-			  <h1>Or maybe you just want science to be easier</h1>
-		</section>
-
-		<section>
-			  <h1>Or maybe you just want to know how to get data</h1>
-			  <br>
-			  <h2>fair enough</h2>
-		</section>
-
-		<section>
-			<h1>So what tools do we need? What's missing?</h1>
-		</section>
-
-		<section>
-			<h1>The data!</h1>
-			<br>
-			<img src="img/data.jpg">
-			<br>
-			<a href="http://www.flickr.com/photos/dia-a-dia/7046151669/in/photolist-bJDnpB-bRoYaF-cS7EZW-9ptzCj-abnRTH-abnRnF-abnRgB-dL8cys-aNBtDM-cm9YMf-amQUCH-8Zp6Uh-7K6TWX-i3Rby3-8Lsgfn-9enWWG-aeKut7-7BSp6r-aNe5h2-aNe5ik-aNe59c-aNe5av-bdCBDe-aM8jnP-aNe5fx-abnRBa-abqGxu-abnRLH-baWyzp-8xGZxL-8xH4hf-7Fg2qR-7FjUHN-7ABwDK-ekYLQy-bf2wDV-e5vYVa-hfFwNs-bvtCC4-7PfYn6-88mGbQ-7GaoYw-cnfFMJ-do7nbh-9zZVbh-8HWjcf-8nRZnP-bf2wtK-ax8z4B-aid5CB-9uDrJR/" style="float:left;">picture link</a>
+			<center><h2> <font color="red">Reproducibly</font> plug data from the web into your science</h2></center>
+			<p style="float:left;">API: Application Programming Interface - APIs are the highways connecting providers to users.
+			<br><br>
+			<center> <h2>Data <i class="fa fa-link fa-3x"></i>&nbsp;&nbsp; Science </h2> </center>
 		</section>
 
 		<section>
@@ -132,7 +230,9 @@
 		<section>
 		  <h2>rOpenSci packages</h2>
 
-			<table cellpadding="20" cellspacing="20">
+		  <h3>at <a href="http://ropensci.org/packages/">ropensci.org/packages</a> </h3>
+
+			<table cellpadding="40" cellspacing="40">
 				<tr>
 	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
 		<td>    <font color="red"><i class="fa fa-bar-chart-o">&nbsp;Data</i></font><br><br>
@@ -143,6 +243,8 @@
 		      <li> <a href="https://github.com/ropensci/treebase">treebase</a> </li>
 		      <li> <a href="https://github.com/ropensci/rfishbase">rfishbase</a> </li>
 		      <li> <a href="https://github.com/ropensci/rWBclimate">rWBclimate</a> </li>
+		      <li> <a href="https://github.com/ropensci/reml">reml</a> </li>
+		      <li> <a href="https://github.com/ropensci/RNeXML">RNeXML</a> </li>
 		    </ul>
 		</td>
 		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
@@ -167,6 +269,18 @@
 		    </ul>
 		</td>
 			</table>
+		</section>
+
+		<section>
+			<h1>Hold up - Why would I want to get data programatically?</h1>
+		</section>
+
+		<section>
+			<h2 style="float:left;"> <i class="fa fa-code"></i> Science is just easier </h2>
+			<br><br><br>
+			<h2 style="float:left;"> <i class="fa fa-code"></i> You can reproduce your work </h2>
+			<br><br><br>
+			<h2 style="float:left;"> <i class="fa fa-code"></i> Others can reproduce your work </h2>
 		</section>
 
 		<section data-markdown>
@@ -218,7 +332,7 @@
 		</section>
 
 		<section data-markdown>
-			## spocc example
+			## Unified species occurrence data - <font color="red">spocc</font>
 
 			```r
 			library(spocc); library(rCharts)
@@ -246,26 +360,48 @@
 			<table cellpadding="30" cellspacing="30">
 			<tr>
 				<td>&nbsp;&nbsp;</td> 
-		<td> <div id="rotate_text">rCharts</div></td>
+		<!-- <td> <div id="rotate_text">rCharts</div></td> -->
 				<td>&nbsp;&nbsp;</td> 
 				<td> <img src="img/rcharts.png" width="350"> </td>
 			    <td>&nbsp;&nbsp;</td> 
-	 	<td> <div id="rotate_text">GitHub</div></td>
+	 	<!-- <td> <div id="rotate_text">GitHub</div></td> -->
 			 	<td>&nbsp;&nbsp;</td>
 			    <td> <img src="img/mapgist.png" width="350"> </td>
 			    <td>&nbsp;&nbsp;</td> 
 		    </tr>
 		    <tr>
 		    	<td>&nbsp;&nbsp;</td> 
-		<td> <div id="rotate_text">CartoDB</div></td>
+		<!-- <td> <div id="rotate_text">CartoDB</div></td> -->
 				<td>&nbsp;&nbsp;</td> 
 			    <td><img src="img/cartodb.png" width="350"> </td>
 			    <td>&nbsp;&nbsp;</td> 
-	 	<td> <div id="rotate_text">Shiny</div></td>
+	 	<!-- <td> <div id="rotate_text">Shiny</div></td> -->
 			 	<td>&nbsp;&nbsp;</td> 
 			    <td><img src="img/mapshiny.png" width="350"> </td>
 			</tr>
 			</table>
+		</section>
+			
+		<section>
+			<h2>Visualize data interactively with GitHub</h2>
+			<br>
+			<script src="https://gist.github.com/sckott/7935773.js"></script>
+		</section>
+
+		<section>
+			<h2>Visualize data interactively with CartoDB</h2>
+			<br>
+			<iframe width='100%' height='800' frameborder='0' src='http://recology.cartodb.com/viz/76a5598e-444b-11e3-8a8c-5404a6a69006/embed_map?title=false&description=false&search=false&shareable=false&cartodb_logo=true&layer_selector=false&legends=false&scrollwheel=true&sublayer_options=1&sql=&zoom=3&center_lat=37.61423141542417&center_lon=-100.72265625'></iframe>
+		</section>
+
+		<section>
+			<br><br><br><br>
+			<h1>this is powerful</h1>
+		</section>
+
+		<section>
+			<br><br><br><br>
+			<h1>R <i class="fa fa-plus"></i> writing <i class="fa fa-pencil"></i></h1>
 		</section>
 
 		<section>
@@ -276,6 +412,19 @@
 		</section>
 
 		<section>
+			<h2>An example</h2>
+			<p>Piwowar paper on GitHub at <a href="https://github.com/hpiwowar/citation11k">https://github.com/hpiwowar/citation11k</a>
+			<br>
+			<img src="img/piwowar_readme.png" width="800">
+		</section>
+
+		<section>
+			<h2>The final paper, compiled w/ knitr from text+code</h2>
+			<br>
+			<img src="img/piwowar_result.png" width="800">
+		</section>
+
+		<section>
 			<br><br><br>
 			  <center>
 			    <font size="40">Data acquisition <i class="fa fa-plus"></i> data manipulation <i class="fa fa-plus"></i> data analysis <i class="fa fa-plus"></i> data visualization <i class="fa fa-bar-chart-o"></i> - combined with tools for writing <i class="fa fa-pencil"></i> in R, including <code>knitr</code> and <code>Markdown/LaTeX</code> - make an open science workflow <i class="fa fa-spinner"></i></font>
@@ -283,22 +432,17 @@
 		</section>
 
 		<section>
-			<br><br>
-		  <font size="18"><center> This talk on the interwebs: <a href="http://ropensci.github.io/workshops-montreal-2013-12/00-introduction/intro_slides/index.html">http://ropensci.github.io/workshops-montreal-2013-12/00-introduction/intro_slides/index.html</a> </center></font>
+			<br>
+		  <font size="18"><center> rOpenSci on the web: <a href="http://ropensci.org/">http://ropensci.org/</a> </center></font>
 		  <br><br>
+		  <font size="18"><center> This talk on the interwebs: <a href="http://recology.info/talks/montreal">http://recology.info/talks/montreal</a> </center></font>
+		  <br><br>
+		  <font size="18"><center> <a href="http://gvwilson.github.io/2014-01-20-montreal/">Montreal Software Carpentry 2 day Bootcamp</a> </center>
+		  <br>
 		  <font size="18"><center>Made w/ <a href="https://github.com/hakimel/reveal.js">reveal.js</a></center></font>
 		  <br>
 		  <font size="18"><center>Icons by: <a href="http://fortawesome.github.io/Font-Awesome/">FontAwesome v4.0.3</a></center></font>
 		</section>
-
-		<section>
-			<br><br><br>
-
-			<h2>Please take our survey so we can make these workshops better :)</h2>
-
-			<font size="18"><center> <a href="http://ropensci.org/quebec_survey">http://ropensci.org/quebec_survey</a>  </center></font>
-		</section>
-
 			</div> 
 
 	<!-- End slides -->

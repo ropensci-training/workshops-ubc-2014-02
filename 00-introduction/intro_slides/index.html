@@ -283,16 +283,57 @@
 			<h2 style="float:left;"> <i class="fa fa-code"></i> Others can reproduce your work </h2>
 		</section>
 
-		<section data-markdown>
-			## Public Library of Science full text - <font color="red">rplos</font>
-			
-			```r
-			library(rplos)
-			plot_throughtime(list("reproducible science"), 500)
-			```
+		<section>
+			<section data-markdown>
+				## taxonomy!!!! - <font color="red">taxize</font>
 
-			![](code/figure/unnamed-chunk-1.png) 
-		</section>
+				```r
+				library(taxize)
+				itis_downstream(tsns=18030, downto="Genus")
+				```
+
+				```
+	     tsn parentname parenttsn   taxonname rankid rankname
+				1  18031   Pinaceae     18030       Abies    180    Genus
+				2  18033   Pinaceae     18030       Picea    180    Genus
+				3  18035   Pinaceae     18030       Pinus    180    Genus
+				4 183396   Pinaceae     18030       Tsuga    180    Genus
+				5 183405   Pinaceae     18030      Cedrus    180    Genus
+				6 183409   Pinaceae     18030       Larix    180    Genus
+				7 183418   Pinaceae     18030 Pseudotsuga    180    Genus
+				8 822529   Pinaceae     18030  Keteleeria    180    Genus
+				9 822530   Pinaceae     18030 Pseudolarix    180    Genus
+				```
+			</section>
+
+			<section data-markdown>
+				
+				```r
+				classification("Pinus contorta", db = "ncbi")
+				```
+
+				```
+				                 name         rank
+1  cellular organisms      no rank
+2           Eukaryota superkingdom
+3       Viridiplantae      kingdom
+4        Streptophyta       phylum
+5      Streptophytina      no rank
+6         Embryophyta      no rank
+7        Tracheophyta      no rank
+8       Euphyllophyta      no rank
+9       Spermatophyta      no rank
+10   Acrogymnospermae      no rank
+11            Pinidae     subclass
+12            Pinales        order
+13           Pinaceae       family
+14              Pinus        genus
+15              Pinus     subgenus
+16     Pinus contorta      species
+				```
+			</section>
+
+		</section>		
 
 		<section data-markdown>
 			## Mapping biodiversity data - <font color="red">rgbif</font>

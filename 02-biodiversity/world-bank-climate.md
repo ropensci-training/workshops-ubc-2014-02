@@ -21,12 +21,14 @@ The package can download data for any of the 13 major climate models, but it als
 
 
 ```r
-gbr.dat.t <- get_ensemble_temp("GBR", "annualavg", 1900, 2100)
-gbr.dat.t <- subset(gbr.dat.t, gbr.dat.t$percentile == 50)
+gbr.dat.t <- get_ensemble_temp("GBR", "annualavg", 1900,2100)
+gbr.dat.t <- subset(gbr.dat.t,gbr.dat.t$percentile == 50)
 
-ggplot(gbr.dat.t, aes(x = fromYear, y = data, group = scenario, colour = scenario)) + 
-    theme_bw(base_size = 20) + geom_point() + geom_path() + labs(x = "Year", 
-    y = "Annual Average Temperature in 20 year increments")
+ggplot(gbr.dat.t,aes(x=fromYear,y=data,group=scenario, colour=scenario)) + 
+  theme_bw(base_size=20) + 
+  geom_point() + 
+  geom_path() + 
+  labs(x="Year", y="Annual Average Temperature in 20 year increments")
 ```
 
 ![plot of chunk tempPlot](figure/tempPlot.png) 
@@ -36,11 +38,13 @@ As you can see the A2 scenario of unchecked growth predicts a higher annual aver
 
 
 ```r
-gbr.dat.p <- get_ensemble_precip("GBR", "annualavg", 1900, 2100)
-gbr.dat.p <- subset(gbr.dat.p, gbr.dat.p$percentile == 50)
-ggplot(gbr.dat.p, aes(x = fromYear, y = data, group = scenario, colour = scenario)) + 
-    theme_bw(base_size = 20) + geom_point() + geom_path() + labs(x = "Year", 
-    y = "Annual Average precipitation in mm")
+gbr.dat.p <- get_ensemble_precip("GBR", "annualavg", 1900,2100)
+gbr.dat.p <- subset(gbr.dat.p,gbr.dat.p$percentile == 50)
+ggplot(gbr.dat.p, aes(x=fromYear,y=data,group=scenario, colour=scenario)) + 
+  theme_bw(base_size=20) + 
+  geom_point() + 
+  geom_path() + 
+  labs(x="Year", y="Annual Average precipitation in mm")
 ```
 
 ![plot of chunk precipplot](figure/precipplot.png) 

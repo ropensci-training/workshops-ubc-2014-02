@@ -12,12 +12,12 @@ comnames <- sci2comm(splist, db = "itis", simplify = TRUE)
 
 # Unfortunately, common names are not standardized like species names, so
 # there are multiple common names for each taxon
-sapply(comnames, nrow)
+sapply(comnames, length)
 ```
 
 ```
 ##    Helianthus annuus       Pinus contorta Collomia grandiflora 
-##                    4                   20                    2 
+##                    4                    4                    2 
 ##      Abies magnifica     Rosa californica      Datura wrightii 
 ##                    5                    1                    3 
 ##      Mimulus bicolor     Nicotiana glauca         Madia sativa 
@@ -29,7 +29,7 @@ sapply(comnames, nrow)
 ```r
 
 # So let's just take the first common name for each species
-comnames_vec <- sapply(comnames, function(x) as.character(x$comname[[1]]), USE.NAMES = FALSE)
+comnames_vec <- sapply(comnames, function(x) x[[1]])
 
 # And we can make a data.frame of our scientific and common names
 (allnames <- data.frame(spname = splist, comname = comnames_vec))

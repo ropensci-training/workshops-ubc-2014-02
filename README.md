@@ -18,9 +18,9 @@ You'll be able to copy-paste all of the code provided here directly into RStudio
 |---------------|-------|
 |**Setup-Make sure all widgets are whirling**| 2:00 - 2:05 |
 |**Introduction to rOpenSci** [slides](http://bit.ly/ubcropensci) | 2:05 - 2:30 |
-|**rOpenSci demos 1** *Taxonomic names*  | 2:30 - 3:20 |
+|**Taxonomic names**  | 2:30 - 3:20 |
 |**Break**| 3:20 - 3:30 |
-|**rOpenSci demos 2** *Biodiversity records* | 3:30 - 4:15 |
+|**Biodiversity records** | 3:30 - 4:15 |
 |**Wrap up and discussion**  | 4:15 - 4:30 |
 
 ## Feedback

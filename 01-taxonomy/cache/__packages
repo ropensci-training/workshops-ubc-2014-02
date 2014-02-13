@@ -1,12 +1,11 @@
 base
 devtools
 knitr
-plyr
-raster
+lattice
+permute
 Rdocumentation
-rjson
 sacbox
 slidify
 slidifyLibraries
-sp
 taxize
+vegan

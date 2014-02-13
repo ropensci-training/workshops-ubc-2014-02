@@ -1,30 +1,29 @@
 
 # Biodiversity suite at rOpenSci
 
-1. Gbif, Bison, Vertnet, taxize
-    * rGBIF
-    * taxize
-    * Vernet
-2. rWBClimate, rNOAA
-    * NOAA precipitation data as sparklines
-    * NOAA sea ice data
-    * Climate predictions for Europe
-
-Acquiring various types of data from web repositories:
-
-* [Global biodiversity data](https://github.com/ropensci/workshops-sheffield-2013-09/blob/master/01-biodiversity-climate/rgbif_usecase1.md)
-
-*  [Resolving taxonomic data](https://github.com/ropensci/workshops-sheffield-2013-09/blob/master/01-biodiversity-climate/taxize_usecase2.md)
+1. GBIF, Bison, iNaturalist, Berkeley Ecoengine, spocc
+    * rgbif
+    * rbison
+    * rinat
+    * ecoengine
+    * spocc
+2. World Bank Climate data, NOAA climate data
+    * rWBclimate
+    * rnoaa
 
 ---
 
 ## Install these packages locally
 
 ```coffee
-install.packages("taxize")
-install.packages("rgbif")
-install.packages("vertnet")
-# Packages not currently on CRAN
+install.packages(c("rgbif","rbison","rinat","ecoengine","rWBclimate"))
+```
+
+Packages not currently on CRAN
+
+```coffee
+install.packages("devtools")
+library(devtools)
 install_github("rnoaa", "ropensci")
-install_github("rWBclimate", "ropensci")
+install_github("spocc", "ropensci")
 ```

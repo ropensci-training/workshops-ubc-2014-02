@@ -26,7 +26,7 @@ There are many ways to resolve taxonomic names in taxize. Of course, the ideal n
 
 ```r
 # The tnrs function accepts a vector of 1 or more
-splist_tnrs <- tnrs(query = splist, getpost = "POST", source_ = "iPlant_TNRS")
+splist_tnrs <- tnrs(query = splist, getpost = "POST", source = "iPlant_TNRS")
 
 # Remove some fields
 (splist_tnrs <- splist_tnrs[, !names(splist_tnrs) %in% c("matchedName", "annotations", 
@@ -34,7 +34,7 @@ splist_tnrs <- tnrs(query = splist, getpost = "POST", source_ = "iPlant_TNRS")
 ```
 
 ```
-           submittedName         acceptedName    sourceId score
+           submittedname         acceptedname    sourceid score
 3       Helanthus annuus    Helianthus annuus iPlant_TNRS  0.98
 1         Pinos contorta       Pinus contorta iPlant_TNRS  0.96
 4  Collomia grandiflorra Collomia grandiflora iPlant_TNRS  0.99
@@ -45,6 +45,17 @@ splist_tnrs <- tnrs(query = splist, getpost = "POST", source_ = "iPlant_TNRS")
 8       Nicotiana glauca     Nicotiana glauca iPlant_TNRS     1
 6          Maddia sativa         Madia sativa iPlant_TNRS  0.97
 2    Bartlettia scapposa   Bartlettia scaposa iPlant_TNRS  0.98
+            matchedname
+3     Helianthus annuus
+1        Pinus contorta
+4  Collomia grandiflora
+5       Abies magnifica
+10     Rosa californica
+9       Datura wrightii
+7       Mimulus bicolor
+8      Nicotiana glauca
+6          Madia sativa
+2    Bartlettia scaposa
 ```
 
 ```r
@@ -55,7 +66,7 @@ splist_tnrs <- tnrs(query = splist, getpost = "POST", source_ = "iPlant_TNRS")
 # be).
 
 # So here's our updated species list
-(splist <- as.character(splist_tnrs$acceptedName))
+(splist <- as.character(splist_tnrs$acceptedname))
 ```
 
 ```

@@ -12,13 +12,13 @@ library(rnoaa)
 
 ### Get URLs for data
 
-```{r geturls, warning=FALSE, comment=NA, message=FALSE}
+```{r geturls, warning=FALSE, comment=NA, message=FALSE, cache=TRUE}
 urls <- seaiceeurls(mo='Apr', pole='N')[1:12]
 ```
 
 ### Download sea ice data
 
-```{r getdata, warning=FALSE, comment=NA, message=FALSE}
+```{r getdata, warning=FALSE, comment=NA, message=FALSE, cache=TRUE}
 # registerDoMC(cores = 2)
 # out <- llply(urls, noaa_seaice, storepath="~/", .parallel = TRUE)
 out <- lapply(urls, noaa_seaice, storepath="~/")
@@ -29,7 +29,7 @@ head(df)
 
 ### Plot data
 
-```{r plot, warning=FALSE, comment=NA, message=FALSE}
+```{r plot, warning=FALSE, comment=NA, message=FALSE, cache=TRUE}
 ggplot(df, aes(long, lat, group=group)) + 
   geom_polygon(fill = "steelblue") +
   theme_ice() +

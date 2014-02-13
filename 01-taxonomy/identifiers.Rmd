@@ -28,5 +28,5 @@ In this case get many identifiers for many names, then pass in identifiers to ge
 ```{r, message=FALSE, warning=FALSE}
 mynames <- c("Helianthus annuus","Pinus contorta","Collomia grandiflora")
 out <- get_ids(names=mynames, db = c('ncbi','itis','col','eol','tropicos'))
-classification(out)
+classification(out$col)
 ```

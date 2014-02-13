@@ -15,13 +15,9 @@ library(vegan)
 
 ```{r checknames, message=FALSE, warning=FALSE}
 data(dune, package='vegan')
-dune <- dune[,-c(22:30)] # take a subset
+dune <- dune[,-c(7:30)] # take a subset
 species <- c("Bellis perennis", "Empetrum nigrum", "Juncus bufonius",
-"Juncus articulatus","Aira praecox", "Eleocharis parvula", "Rumex acetosa", "Vicia lathyroides",
-"Brachythecium rutabulum", "Ranunculus flammula", "Cirsium arvense",
-"Hypochaeris radicata", "Leontodon autumnalis", "Potentilla palustris",
-"Poa pratensis", "Calliergonella cuspidata", "Trifolium pratense",
-"Trifolium repens", "Anthoxanthum odoratum", "Salix repens", "Achillea millefolium")
+"Juncus articulatus","Aira praecox", "Eleocharis parvula")
 colnames(dune) <- species
 head(dune)
 ```

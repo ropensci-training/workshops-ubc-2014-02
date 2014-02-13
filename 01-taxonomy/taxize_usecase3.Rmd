@@ -2,28 +2,33 @@
 
 A common task is getting the taxonomic tree upstream from your study taxa. We often know what family or order our taxa are in, but it we often don't know the tribes, subclasses, and superfamilies. taxize provides many avenues to getting classifications. Many are accessible via a single function (*classification*), including the Integrated Taxonomic Information System (ITIS) and National Center for Biotechnology Information (NCBI); and via the Catalogue of Life (see function *col_classification*):
 
-```{r classification, cache=TRUE}
-# Let's get classifications from ITIS using Taxonomic Serial Numbers. Note that we could use uBio instead.
-class_list <- classification(splist, db="itis")
+Load `taxize`
 
-# And we can attach these names to our allnames data.frame
-library(plyr)
-gethiernames <- function(x){
-  temp <- x[,c("rankName","taxonName")]
-  values <- data.frame(t(temp[,2]))
-  names(values) <- temp[,1]
-  return( values )
-}
-class_df <- ldply(class_list, gethiernames)
-allnames_df <- merge(allnames, class_df, by.x="spname", by.y="Species")
-allnames_df$spname <- as.character(allnames_df$spname)
-
-# Now that we have allnames_df, we can start to see some relationships among species simply by their shared taxonomic names
-allnames_df[1:2,]
+```{r class1, cache=TRUE}
+library(taxize)
 ```
 
-We can also get downstream names, in this case all species from the genus *Apis*
+Define a species list
 
-```{r}
-col_downstream(name="Apis", downto="Species")
+```{r class2, cache=TRUE}
+splist <- c("Rosa californica","Datura wrightii","Mimulus bicolor","Nicotiana glauca","Madia sativa","Bartlettia scaposa")
+```
+
+Let's get classifications from ITIS using Taxonomic Serial Numbers. Note that we could use uBio instead.
+
+```{r class3, cache=TRUE, message=FALSE, warning=FALSE}
+class_list <- classification(splist, db="itis")
+```
+
+And we can combine these all in two different ways
+
+```{r class4, cache=TRUE}
+a <- rbind(class_list)
+head( a ); tail( a )
+```
+
+Or
+
+```{r class5, cache=TRUE}
+cbind(class_list)
 ```

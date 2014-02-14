@@ -21,7 +21,7 @@ install.packages(c('abind','ape','assertthat','bigrquery','bit','chron','data','
 	'phytools','plyr','proto','quantreg','rbison','RColorBrewer','Rcpp','RCurl','rebird','reshape',
 	'reshape2','rgbif','rgdal','rgeos','rinat','rjson','RJSONIO','RMySQL','roxygen2','RPostgreSQL',
 	'RSQLite','scales','shiny','sp','stats','stringr','table','Taxonstand','tcltk','testthat','utils',
-	'vegan','whisker','XML','xts','yml'))
+	'vegan','whisker','XML','xts','yml','taxize'))
 ```
 
 Then install some packages from GitHub. First install the devtools package since it will allow you to install packages directly from GitHub that haven't yet been submitted to CRAN.

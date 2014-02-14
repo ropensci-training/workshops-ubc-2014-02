@@ -1,4 +1,4 @@
-## rgbif use case No. 3 - Finding countries species are found in using rgbif
+## Finding countries species are found in using rgbif
 
 ### Load some libraries
 

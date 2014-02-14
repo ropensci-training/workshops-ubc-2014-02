@@ -1,4 +1,4 @@
-## taxize use case No. 3 - Aggregate a data set to a taxonomic level
+## Aggregate a data set to a taxonomic level
 
 
 

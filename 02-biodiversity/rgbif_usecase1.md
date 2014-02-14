@@ -1,4 +1,4 @@
-## rgbif use case No. 1 - Ecological niche modelling (aka species distribution modelling)
+## Ecological niche modelling (aka species distribution modelling)
 
 In this example, we plot actual occurrence data for *Bradypus* species against a single predictor variable, BIO1 (annual mean temperature). This is only ont step in a species distribution modelling nworkflow.
 

@@ -1,4 +1,4 @@
-## taxize use case No. 3 - Aggregate a data set to a taxonomic level
+## Aggregate a data set to a taxonomic level
 
 ```{r defaults, eval=TRUE, echo=FALSE}
 opts_chunk$set(comment=NA, warning=FALSE, message=FALSE, fig.width=7, fig.height=6)

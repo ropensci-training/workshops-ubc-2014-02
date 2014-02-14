@@ -11,7 +11,7 @@ comnames <- sci2comm(splist, db="itis", simplify=TRUE)
 sapply(comnames, length)
 
 # So let's just take the first common name for each species
-comnames_vec <- sapply(comnames, function(x) x[[1]])
+(comnames_vec <- sapply(comnames, function(x) x[[1]]))
 
 # And we can make a data.frame of our scientific and common names
 (allnames <- data.frame(spname = splist, comname = comnames_vec))

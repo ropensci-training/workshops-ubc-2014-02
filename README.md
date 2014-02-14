@@ -1,8 +1,10 @@
 
 [![](ropensci_logo.png)](http://ropensci.org/)
 # UBC Workshop
+
 **February 14th, 2:00 - 4:30**
-*ROOM C*
+
+*Biodiversity Research Centre Room 224*
 
 Welcome to the GitHub repository for the UBC workshop. All the code and packages included in this material is already installed on our RStudio server. You'll simply need to login [here](http://rstudio.ropensci.org/) with the credentials provided to you at the workshop. Note that the RStudio server instance is only available during the workshop itself.
 

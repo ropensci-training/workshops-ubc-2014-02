@@ -23,12 +23,5 @@ class_list <- classification(splist, db="itis")
 And we can combine these all in two different ways
 
 ```{r class4, cache=TRUE}
-a <- rbind(class_list)
-head( a ); tail( a )
-```
-
-Or
-
-```{r class5, cache=TRUE}
-cbind(class_list)
+ldply(class_list)
 ```

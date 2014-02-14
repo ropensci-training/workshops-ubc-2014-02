@@ -9,10 +9,10 @@ library(taxize)
 out <- get_ids(names="Poa annua", db = c('ncbi','itis','col','eol','tropicos'))
 ```
 
-## get classification from ITIS
+## get classification from NCBI
 
 ```{r, message=FALSE, warning=FALSE}
-classification(out$itis)
+classification(out$ncbi)
 ```
 
 ## get synonyms from ITIS
